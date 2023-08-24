@@ -1,0 +1,18 @@
+<h3 class="h1">Cursos da Unidade Cesit</h3>
+<mat-accordion>
+    
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Licenciatura em Computação
+        </mat-panel-title>
+        <mat-panel-description>
+            Curso Regular {{panelOpenState ? '' : ''}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <button class="button1" mat-raised-button color="primary">Extensão</button>
+      <button class="button1" mat-raised-button color="primary">Pesquisa</button>
+      <button class="button1" mat-raised-button color="primary">Outros</button>
+    </mat-expansion-panel>
+  </mat-accordion>

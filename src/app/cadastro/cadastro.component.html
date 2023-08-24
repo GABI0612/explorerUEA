@@ -1,0 +1,106 @@
+<section class="flex-container">
+    <h2>Nova Pessoa</h2>
+  
+    <form class="form" #pessCadastroForm="ngForm">
+  
+        <mat-form-field appearance="outline" class="example-full-width" >
+            <mat-label>Nome</mat-label>
+            <input  name="nome" ngModel #nome="ngModel" matInput placeholder="Informe o nome" required>
+          
+            <mat-error *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+              <span *ngIf="nome.errors?.['required']">
+                Este campo é obrigatório.
+              </span>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Sobrenome</mat-label>
+            <input name="sobrenome" ngModel #sobrenome="ngModel" matInput placeholder="Informe o sobrenome" required>
+          
+            <mat-error *ngIf="sobrenome.invalid && (sobrenome.dirty || sobrenome.touched)">
+              <span *ngIf="sobrenome.errors?.['required']">
+                Este campo é obrigatório.
+              </span>
+            </mat-error>
+          </mat-form-field>
+  
+
+  
+      <div class="flex-filds-container">
+        <mat-form-field appearance="outline" class="cinquenta-per-width">
+          <mat-label>Matricula</mat-label>
+          <input name="matricula" ngModel #matricula="ngModel" matInput placeholder="Informe a matricula" required>
+        
+          <mat-error *ngIf="matricula.invalid && (matricula.dirty || matricula.touched)">
+            <span *ngIf="matricula.errors?.['required']">
+              Este campo é obrigatório.
+            </span>
+          </mat-error>
+        
+        </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="vinte-cinco-per-width">
+              <mat-label>Tipo de Pessoa</mat-label>
+              <mat-select name="tipoPessoa" ngModel #tipoPessoa="ngModel" required>
+                <mat-option *ngFor="let c of tipoPessoas" [value]="c.value">
+                  {{ c.label }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="tipoPessoa.invalid && (tipoPessoa.dirty || tipoPessoa.touched)">
+                <span *ngIf="tipoPessoa.errors?.['required']">
+                  Este campo é obrigatório.
+                </span>
+              </mat-error>
+            </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input name="email" ngModel #email="ngModel" matInput placeholder="Informe o email" required>
+      
+        <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+          <span *ngIf="email.errors?.['required']">
+            Este campo é obrigatório.
+          </span>
+        </mat-error>
+      </mat-form-field>
+
+      
+  
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Senha</mat-label>
+          <input name="senha" ngModel #senha="ngModel" matInput placeholder="Informe sua senha" required minlength="8">
+       
+          <mat-error *ngIf="senha.invalid && (senha.dirty || senha.touched)">
+            <span *ngIf="senha.errors?.['required']">
+              Este campo é obrigatório.
+            </span>
+            <span *ngIf="senha.errors?.['minlength']">
+              A senha deve ter no mínimo 8 caracteres.
+            </span>
+          </mat-error>
+       
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Confirme sua senha</mat-label>
+            <input name="senhaConfirma" ngModel #senhaConfirma="ngModel" matInput placeholder="Confirme a senha" required minlength="5">
+         
+            <mat-error *ngIf="senhaConfirma.invalid && (senhaConfirma.dirty || senhaConfirma.touched)">
+              <span *ngIf="senhaConfirma.errors?.['required']">
+                Este campo é obrigatório.
+              </span>
+            </mat-error>
+         
+          </mat-form-field>
+  
+  
+      <div class="btn">
+        <button [disabled]="pessCadastroForm.invalid" mat-raised-button color="primary" (click)="salvar(pessCadastroForm)">Salvar</button>
+        <button mat-raised-button >Novo</button>
+        <button mat-raised-button >Voltar</button>
+      </div>
+  
+    </form>
+  </section>
+  

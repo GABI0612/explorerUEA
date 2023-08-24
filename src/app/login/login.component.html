@@ -1,0 +1,44 @@
+<section class="flex-container">
+    <h2>Login</h2>
+  
+    <form class="form" #pessCadastroForm="ngForm">
+  
+        
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input name="email" ngModel #email="ngModel" matInput placeholder="Informe o email" required>
+      
+        <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+          <span *ngIf="email.errors?.['required']">
+            Este campo é obrigatório.
+          </span>
+        </mat-error>
+      </mat-form-field>
+
+      
+  
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Senha</mat-label>
+          <input name="senha" ngModel #senha="ngModel" matInput placeholder="Informe sua senha" required minlength="8">
+       
+          <mat-error *ngIf="senha.invalid && (senha.dirty || senha.touched)">
+            <span *ngIf="senha.errors?.['required']">
+              Este campo é obrigatório.
+            </span>
+            <span *ngIf="senha.errors?.['minlength']">
+              A senha deve ter no mínimo 8 caracteres.
+            </span>
+          </mat-error>
+       
+        </mat-form-field>
+        
+  
+      <div class="btn">
+        <button  mat-raised-button color="primary">Acessar</button>
+        <button mat-raised-button >Voltar</button>
+      </div>
+  
+    </form>
+  </section>
+  

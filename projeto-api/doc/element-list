@@ -1,0 +1,16 @@
+uea.projeto_api
+uea.projeto_api.config
+uea.projeto_api.config.authserver
+uea.projeto_api.config.authserver.jose
+uea.projeto_api.config.authserver.resourceserver
+uea.projeto_api.dto
+uea.projeto_api.models
+uea.projeto_api.models.enums
+uea.projeto_api.repositories
+uea.projeto_api.repositories.atividade
+uea.projeto_api.repositories.filters
+uea.projeto_api.repositories.foto
+uea.projeto_api.resourcea
+uea.projeto_api.resources.exceptions
+uea.projeto_api.security
+uea.projeto_api.services

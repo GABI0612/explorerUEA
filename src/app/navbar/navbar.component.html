@@ -1,0 +1,24 @@
+
+  <p>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button class="example-icon"  aria-label="Example icon-button with menu icon">EXPLORER UEA</button>
+        <span class="example-spacer"></span>
+        <button  [matMenuTriggerFor]="menu" mat-icon-button class="example-icon" 
+        aria-label="Example icon-button with menu icon" >
+          <mat-icon >menu</mat-icon>
+        </button>
+
+        
+          <mat-menu #menu="matMenu">
+              <button mat-menu-item>Login</button>
+              <button mat-menu-item>Novo Cadastro</button>
+          </mat-menu>
+      </mat-toolbar-row>
+  
+    
+    </mat-toolbar>
+  </p>
+
+
+

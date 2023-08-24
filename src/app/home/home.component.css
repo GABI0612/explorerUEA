@@ -1,0 +1,152 @@
+
+.carousel-wrapper {
+    width: 90%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    border-radius: 20px;
+    margin: 30px auto 20px;
+  }
+  
+  .carousel-container {
+    width: 90%;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .carousel {
+    display: flex;
+    width: 2000px;
+    animation: sliding 12s infinite;
+  }
+  .carousel div {
+    width: 90%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel:hover {
+    animation-play-state: paused;
+  }
+  .carousel .image-one {
+    background-image: url("https://images.even3.com.br/WBw1SLRoYKRzDIpSZwnMBAAsp84=/1100x440/smart/even3.blob.core.windows.net/banner/capa_even3_1100_440.a3d2ed421b124b49a4fc.png");
+  }
+  .carousel .image-two {
+    background-image: url("https://ppged.uea.edu.br/wp-content/uploads/elementor/thumbs/uea-logo-negativa-1-p6z7vaq80xvfga28ig80wucdb39zbomsqcfljhjajm.png");
+  }
+  .carousel .image-three {
+    background-image: url("https://yt3.googleusercontent.com/YxeUOEH-7HhrnuM3o3Wj_DBBUeRr-tpbOlxaI4omRIsUGosmZEGfkvk638-nDDSVvqkSCrAUWPg=s900-c-k-c0x00ffffff-no-rj");
+  }
+  
+  @keyframes sliding {
+    30% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-400px);
+    }
+    65% {
+      transform: translateX(-400px);
+    }
+    70% {
+      transform: translateX(-800px);
+    }
+    98% {
+      transform: translateX(-800px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .carousel-wrapper {
+      width: 312px;
+      height: 210px;
+    }
+  
+    .carousel-container {
+      width: 240px;
+      height: 150px;
+    }
+  
+    .carousel {
+      width: 720px;
+    }
+    .carousel > div {
+      width: 240px;
+      height: 150px;
+    }
+  
+    @keyframes sliding {
+      30% {
+        transform: translateX(0);
+      }
+      35% {
+        transform: translateX(-240px);
+      }
+      65% {
+        transform: translateX(-240px);
+      }
+      70% {
+        transform: translateX(-480px);
+      }
+      98% {
+        transform: translateX(-480px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+
+
+
+
+
+
+  .container {
+    column-count: 3;
+    margin: 0% 7% 0% 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+  .container2 {
+    column-count: 2;
+    margin: 0% 15% 0% 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+
+  .col{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    border-radius: 20px;
+    margin: 10px auto 20px;
+    
+  }
+  
+
+  .img1{
+    align-items: center;
+    width: 100%;
+    
+    display: flex;
+  }
+
+  .texto{
+    padding: 15px;
+    text-align:center;
+  }
