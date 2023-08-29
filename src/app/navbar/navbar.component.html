@@ -2,7 +2,7 @@
   <p>
     <mat-toolbar color="primary">
       <mat-toolbar-row>
-        <button mat-icon-button class="example-icon"  aria-label="Example icon-button with menu icon">EXPLORER UEA</button>
+        <button mat-icon-button class="example-icon"  aria-label="Example icon-button with menu icon" routerLink="">EXPLORER UEA</button>
         <span class="example-spacer"></span>
         <button  [matMenuTriggerFor]="menu" mat-icon-button class="example-icon" 
         aria-label="Example icon-button with menu icon" >
@@ -11,8 +11,9 @@
 
         
           <mat-menu #menu="matMenu">
-              <button mat-menu-item>Login</button>
-              <button mat-menu-item>Novo Cadastro</button>
+              <button mat-menu-item routerLink="/login">Login</button>
+              <button mat-menu-item routerLink="/cadastro">Novo Usuario</button>
+              <button mat-menu-item routerLink="/projetos/novo">Novo Projeto</button>
           </mat-menu>
       </mat-toolbar-row>
   

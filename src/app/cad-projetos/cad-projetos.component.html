@@ -1,0 +1,64 @@
+<section class="flex-container">
+  <h2>Cadastrar Projeto</h2>
+  <div class="carousel-wrapper">
+  <form class="form" #pessCadastroForm="ngForm">
+
+
+      <input type="file" id="myFile" />
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Orientador</mat-label>
+        <input name="orientador" ngModel #orientador="ngModel" matInput placeholder="nome do orientador" required minlength="8">
+     
+        <mat-error *ngIf="orientador.invalid && (orientador.dirty || orientador.touched)">
+          <span *ngIf="orientador.errors?.['required']">
+            Este campo é obrigatório.
+          </span>
+        </mat-error>
+     
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Coorientador</mat-label>
+        <input name="coorientador" ngModel #coorientador="ngModel" matInput placeholder="nome do coorientador" required minlength="8">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Bolsista</mat-label>
+        <input name="bolsista" ngModel #bolsista="ngModel" matInput placeholder="nome do bolsista" required minlength="8">
+     
+        <mat-error *ngIf="bolsista.invalid && (bolsista.dirty || bolsista.touched)">
+          <span *ngIf="bolsista.errors?.['required']">
+            Este campo é obrigatório.
+          </span>
+        </mat-error>
+     
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Voluntarios</mat-label>
+        <input name="voluntario" ngModel #voluntario="ngModel" matInput placeholder="nome do voluntarios" required minlength="8">
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline" id="descr" class="example-full-width">
+        <mat-label>Descrição</mat-label>
+        <input name="descricao" ngModel #descricao="ngModel" matInput placeholder="Descreva a atividade" required minlength="8">
+     
+        <mat-error *ngIf="descricao.invalid && (descricao.dirty || descricao.touched)">
+          <span *ngIf="descricao.errors?.['required']">
+            Este campo é obrigatório.
+          </span>
+        </mat-error>
+     
+      </mat-form-field>
+      
+
+    <div class="btn">
+      <button  mat-raised-button color="primary" routerLink="/curso">Salvar</button>
+      <button mat-raised-button routerLink="">Cancelar</button>
+    </div>
+
+  </form>
+  </div>

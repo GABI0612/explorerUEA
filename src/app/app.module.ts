@@ -28,6 +28,8 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { CadAtividadeComponent } from './cad-atividade/cad-atividade.component';
+import { CadProjetosComponent } from './cad-projetos/cad-projetos.component';
 
 
 
@@ -42,7 +44,9 @@ import { FooterComponent } from './footer/footer.component';
     ProjetosComponent,
     AtividadesComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    CadAtividadeComponent,
+    CadProjetosComponent
   ],
   
 

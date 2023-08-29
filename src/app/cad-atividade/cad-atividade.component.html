@@ -1,0 +1,43 @@
+<section class="flex-container">
+    <h2>Enviar Atividade</h2>
+    <div class="carousel-wrapper">
+    <form class="form" #pessCadastroForm="ngForm">
+
+
+        <input type="file" id="myFile" />
+
+
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-label>Titulo da Atividade</mat-label>
+          <input name="atividade" ngModel #atividade="ngModel" matInput placeholder="Titulo da Atividade" required minlength="8">
+       
+          <mat-error *ngIf="atividade.invalid && (atividade.dirty || atividade.touched)">
+            <span *ngIf="atividade.errors?.['required']">
+              Este campo é obrigatório.
+            </span>
+          </mat-error>
+       
+        </mat-form-field>
+
+  
+        <mat-form-field appearance="outline" id="descr" class="example-full-width">
+          <mat-label>Descrição</mat-label>
+          <input name="descricao" ngModel #descricao="ngModel" matInput placeholder="Descreva a atividade" required minlength="8">
+       
+          <mat-error *ngIf="descricao.invalid && (descricao.dirty || descricao.touched)">
+            <span *ngIf="descricao.errors?.['required']">
+              Este campo é obrigatório.
+            </span>
+          </mat-error>
+       
+        </mat-form-field>
+        
+  
+      <div class="btn">
+        <button  mat-raised-button color="primary" routerLink="/curso">Salvar</button>
+        <button mat-raised-button routerLink="">Cancelar</button>
+      </div>
+  
+    </form>
+    </div>
+  
