@@ -30,6 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { CadAtividadeComponent } from './cad-atividade/cad-atividade.component';
 import { CadProjetosComponent } from './cad-projetos/cad-projetos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -55,6 +56,7 @@ import { CadProjetosComponent } from './cad-projetos/cad-projetos.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
 
     CdkAccordionModule,
     MatMenuModule,

@@ -4,8 +4,8 @@
     <mat-expansion-panel (opened)="panelOpenState = true"
                          (closed)="panelOpenState = false">
       <mat-expansion-panel-header>
-        <mat-panel-title>
-            Licenciatura em Computação
+        <mat-panel-title >
+            <button (click)="pesquisa()">PEs</button>
         </mat-panel-title>
         <mat-panel-description>
             Curso Regular {{panelOpenState ? '' : ''}}
