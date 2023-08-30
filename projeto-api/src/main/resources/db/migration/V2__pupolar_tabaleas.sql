@@ -307,5 +307,3 @@ insert into publicacao (descricao, data, codigo_foto, codigo_usuario) values ('S
 insert into publicacao (descricao, data, codigo_foto, codigo_usuario) values ('Passenger on bus injured in collision w hv veh in traf, subs', '2023-01-24', 58, null);
 insert into publicacao (descricao, data, codigo_foto, codigo_usuario) values ('Toxic effect of manganese and its compounds', '2022-11-07', 59, null);
 insert into publicacao (descricao, data, codigo_foto, codigo_usuario) values ('Unspecified open wound of unspecified upper arm, init encntr', '2022-07-27', 60, null);
-
-insert into colagemTematica (ordemFT, codigo_foto) values (1,30)
