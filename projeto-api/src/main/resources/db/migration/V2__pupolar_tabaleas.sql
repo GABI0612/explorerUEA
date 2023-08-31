@@ -1,5 +1,21 @@
 INSERT INTO usuario (nome, email, senha, matricula) values ('Administrador','admin@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
 INSERT INTO usuario (nome, email, senha, matricula) values ('Maria Silva','maria@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Marcos GAbriel','gabriel@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Lucas Silva','lucas@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Victor sena','visctor@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Maria Dolores','maria123@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Administrador','admin@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Maria Silva','maria@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Marcos GAbriel','gabriel@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Lucas Silva','lucas@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Victor sena','visctor@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Maria Dolores','maria123@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Administrador','admin@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Maria Silva','maria@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Marcos GAbriel','gabriel@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Lucas Silva','lucas@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Victor sena','visctor@uea.edu.br','{bcrypt}$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.', '123456');
+INSERT INTO usuario (nome, email, senha, matricula) values ('Maria Dolores','maria123@uea.edu.br','{bcrypt}$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq', '1234567');
 
 INSERT INTO permissao (descricao) values ('ROLE_CADASTRAR_ATIVIDADE');
 INSERT INTO permissao (descricao) values ('ROLE_PESQUISAR_ATIVIDADE');

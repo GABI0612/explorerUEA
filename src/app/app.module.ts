@@ -22,6 +22,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {NgFor, NgIf} from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
+
+
+
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 
 
@@ -31,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CadAtividadeComponent } from './cad-atividade/cad-atividade.component';
 import { CadProjetosComponent } from './cad-projetos/cad-projetos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 
 
@@ -47,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     FooterComponent,
     CadAtividadeComponent,
-    CadProjetosComponent
+    CadProjetosComponent,
+    UsuarioComponent
   ],
   
 

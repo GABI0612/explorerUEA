@@ -1,9 +1,9 @@
 <h3>Projetos</h3>
 
 <mat-card class="example-card">
-    <mat-card-header>
+    <mat-card-header *ngFor="let projetos of listaprojetos">
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Nome do Projeto</mat-card-title>
+      <mat-card-title>{{projetos.titulo}}</mat-card-title>
       <mat-card-subtitle>Pesquisadores</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">

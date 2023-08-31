@@ -9,11 +9,11 @@
   </div>
 
   <div class="carousel-wrapper1">
-  <h3>Nome Do Projeto</h3>
+  <h3 *ngFor="let atividade of listaatividade" ></h3>
 
   <img src="....">
 
-  <p>descrição</p>
+  <p>{{atividade}}</p>
 
   <div class="btn">
     <button  mat-raised-button color="primary" routerLink="/curso" >Editar</button>

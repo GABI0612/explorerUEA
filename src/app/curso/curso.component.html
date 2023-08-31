@@ -2,17 +2,18 @@
 <mat-accordion>
     
     <mat-expansion-panel (opened)="panelOpenState = true"
-                         (closed)="panelOpenState = false">
-      <mat-expansion-panel-header>
+                         (closed)="panelOpenState = false" *ngFor="let cursos of listacurso">
+      <mat-expansion-panel-header >
         <mat-panel-title >
-            <button (click)="pesquisa()">PEs</button>
+          
+              {{cursos.nome}}
+              
         </mat-panel-title>
         <mat-panel-description>
-            Curso Regular {{panelOpenState ? '' : ''}}
+            {{cursos.descricao}} {{panelOpenState ? '' : ''}}
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <button class="button1" mat-raised-button color="primary" routerLink="/projetos">Extensão</button>
-      <button class="button1" mat-raised-button color="primary" routerLink="/projetos">Pesquisa</button>
-      <button class="button1" mat-raised-button color="primary" routerLink="/projetos">Outros</button>
+      <button class="button1" mat-raised-button color="primary" 
+      routerLink="/projetos" *ngFor="let categoria of listacategoria">{{categoria.nome}}</button>
     </mat-expansion-panel>
   </mat-accordion>

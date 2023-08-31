@@ -28,13 +28,24 @@ public class BasicSecurityConfig {
 		
 		http.cors().and().csrf().disable().authorizeHttpRequests(
 				(authorize) -> authorize
-				.requestMatchers(HttpMethod.GET,"/swagger-ui/**","/login","/cursos/**").permitAll()
+				.requestMatchers(HttpMethod.GET,"/swagger-ui/**","/login","/atividades/**","/cursos/**","/categorias/**","/fotos/**","/puplicacoes/**","/usuarios/**","/colagemTematicas/**").permitAll()
+				
+				.requestMatchers(HttpMethod.GET,"/atividades/**").hasAnyRole("PESQUISAR_ATIVIDADE")
+				.requestMatchers(HttpMethod.POST,"/atividades/**").hasAnyRole("CADASTRAR_ATIVIDADE")
+				.requestMatchers(HttpMethod.PUT,"/atividades/**").hasAnyRole("ATUALIZAR_ATIVIDADE")
+				.requestMatchers(HttpMethod.DELETE,"/atividades/**").hasAnyRole("REMOVER_ATIVIDADE")
+				
+				.requestMatchers(HttpMethod.GET,"/publicacoes/**").hasAnyRole("PESQUISAR_PUBLICACAO")
+				.requestMatchers(HttpMethod.POST,"/publicacoes/**").hasAnyRole("CADASTRAR_PUBLICACAO")
+				.requestMatchers(HttpMethod.PUT,"/publicacoes/**").hasAnyRole("ATUALIZAR_PUBLICACAO")
+				.requestMatchers(HttpMethod.DELETE,"/publicacoes/**").hasAnyRole("REMOVER_PUBLICACAO")
 				
 				.requestMatchers(HttpMethod.GET,"/cursos/**").hasAnyRole("PESQUISAR_CURSO")
 				.requestMatchers(HttpMethod.POST,"/cursos/**").hasAnyRole("CADASTRAR_CURSO")
 				.requestMatchers(HttpMethod.PUT,"/cursos/**").hasAnyRole("ATUALIZAR_CURSO")
 				.requestMatchers(HttpMethod.DELETE,"/cursos/**").hasAnyRole("REMOVER_CURSO")
 				
+				.requestMatchers(HttpMethod.GET,"/categorias/**").hasAnyRole("PESQUISAR_CATEGORIA")
 				.requestMatchers(HttpMethod.POST,"/categorias/**").hasAnyRole("CADASTRAR_CATEGORIA")
 				.requestMatchers(HttpMethod.PUT,"/categorias/**").hasAnyRole("ATUALIZAR_CATEGORIA")
 				.requestMatchers(HttpMethod.DELETE,"/categorias/**").hasAnyRole("REMOVER_CATEGORIA")

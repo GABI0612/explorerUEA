@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { CursoServiceService } from './curso-service.service';
 import { Curso } from '../shared/model/curso.model';
+import { Categoria } from '../shared/model/categoria.model';
 
 @Component({
   selector: 'app-curso',
@@ -12,21 +13,37 @@ import { Curso } from '../shared/model/curso.model';
 export class CursoComponent {
   panelOpenState = false;
   listacurso: Curso[] = [];
+  listacategoria: Categoria[] = [];
+  @Input() dataSource: any;
+  @Input() curso!:CursoServiceService;
 
   constructor(
     private cursoService: CursoServiceService,
     
   ){}
 
-  pesquisa(){
-    this.cursoService.listarCursos().subscribe({
-      next: (res)  => {
-        this.listacurso = res;
-        console.log(this.listacurso);
-      },
-      error: (error) => {
-        console.log(error);
-      }
-  });
+    ngOnInit():void{
+      this.cursoService.listarCursos().subscribe({
+        next: (res)  => {
+          this.listacurso = res;
+          console.log(this.listacurso);
+        },
+        error: (error) => {
+          console.log(error);
+        }
+    });
+this.cursoService.listarCategorias().subscribe({
+  next: (res)  => {
+    this.listacategoria = res;
+    console.log(this.listacategoria);
+  },
+  error: (error) => {
+    console.log(error);
   }
+});
+
+
+    }
+
+
 }
