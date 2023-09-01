@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Atividade } from '../shared/model/atividade.model';
 import { ProjetoService } from './projeto.service';
+import { Foto } from '../shared/model/foto.model';
 
 @Component({
   selector: 'app-projetos',
@@ -9,7 +9,7 @@ import { ProjetoService } from './projeto.service';
 })
 export class ProjetosComponent {
   panelOpenState = false;
-  listaprojetos: Atividade[] = [];
+  listaprojetos: Foto[] = [];
   @Input() dataSource: any;
   @Input() projeto!:ProjetoService;
 

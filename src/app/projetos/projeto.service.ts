@@ -1,21 +1,22 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Atividade } from '../shared/model/atividade.model';
+import { Foto } from '../shared/model/foto.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjetoService {
 
-  private projetoUrl = "http://localhost:8080/atividades";
+  private projetoUrl = "http://localhost:8080/fotos";
 
   constructor(private http: HttpClient) { }
 
-  public listarProjetos(): Observable<Atividade[]> {
+  public listarProjetos(): Observable<Foto[]> {
 
-    return this.http.get<Atividade[]>(`${this.projetoUrl}`).pipe(
+    return this.http.get<Foto[]>(`${this.projetoUrl}`).pipe(
       res => res,
       error => error
     );
-  }}
+  }
+}

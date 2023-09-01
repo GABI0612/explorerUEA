@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { Usuario } from '../shared/model/usuario.model';
 import { UsuarioService } from './usuario.service';
+
 
 
 @Component({
@@ -14,9 +15,8 @@ export class UsuarioComponent {
   listausuario: Usuario[] = [];
 
   @Input() dataSource: any;
-  @Input() usuario!:UsuarioService;
-  dialog: any;
-  sharedService: any;
+  @Input() usuario!:Usuario;
+ 
 
   constructor(
     private usuarioService: UsuarioService,
@@ -33,36 +33,29 @@ export class UsuarioComponent {
           console.log(error);
         }
     });
+  }
 
 
+  public confirmarExclusao(usuario: Usuario, codigo: number): void {
+
+        this.excluir(codigo);
+      
     }
-    public confirmarExclusao(usuario: Usuario, codigo: number): void {
-      const dialogRef =this.dialog.open( {
-        width: '600px',
-        data: {
-        }
-      });
-  
-      dialogRef.afterClosed().subscribe((result: string) => {
-        if(result==="confirmado"){
-          this.excluir(codigo);
-        }
-      });
-     }
-  
-  
-    excluir(codigo: number) {
-      console.log(codigo)
-      this.usuarioService.excluir(codigo).subscribe({
-        next: (res)  => {
-        },
-        error: (error) => {
-          console.log(error);
-        }
-      });
-    }
-  
 
 
-}
+  excluir(codigo: number) {
+    console.log(codigo)
+    this.usuarioService.excluir(codigo).subscribe({
+      next: (res)  => {
+        console.log("Usuario excluido")
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    });
+  }
 
+
+
+
+  }

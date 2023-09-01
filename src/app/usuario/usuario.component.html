@@ -14,7 +14,16 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
 
-    
-        
+      <button  class="button1" mat-raised-button color="primary" matTooltip="Editar" >Editar</button>
+      <button  class="button1" mat-raised-button color="primary" matTooltip="Excluir" >Deletar</button>
+
+
+     <!-- <ng-container  *ngFor="let usuarios">  
+            <button [routerLink]="['/cadastro/',usuarios.codigo]" class="button1" mat-raised-button color="primary" matTooltip="Editar" >Editar</button>
+            <button (click)="confirmarExclusao(usuarios, usuarios.codigo)" class="button1" mat-raised-button color="primary" matTooltip="Excluir" >Deletar</button>
+      </ng-container>--> 
     </mat-expansion-panel>
   </mat-accordion>
+
+
+

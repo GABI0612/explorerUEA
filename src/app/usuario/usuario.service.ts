@@ -21,10 +21,8 @@ export class UsuarioService {
       error => error
     );
   }
-
-
   public excluir(codigo: number): Observable<Usuario> {
-   
+
     return this.http.delete<Usuario>(`${this.usuarioUrl}/${codigo}`).pipe(
       res => res,
       error => error
@@ -32,13 +30,5 @@ export class UsuarioService {
   }
 
 
-  public pesquisarPorCodigo(codigo: number): Observable<Usuario> {
-   
-
-    return this.http.get<Usuario>(`${this.usuarioUrl}/${codigo}`).pipe(
-      res => res,
-      error => error
-    );
-  }
 
 }

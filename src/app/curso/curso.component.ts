@@ -14,8 +14,7 @@ export class CursoComponent {
   panelOpenState = false;
   listacurso: Curso[] = [];
   listacategoria: Categoria[] = [];
-  @Input() dataSource: any;
-  @Input() curso!:CursoServiceService;
+
 
   constructor(
     private cursoService: CursoServiceService,
